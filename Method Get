@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Form Data Diri Nelayan</title>
+</head>
+<body>
+	<div class="container">
+      <h2 class="alert alert-primary text-center mt-5"> Data Diri Pembeli Ikan Hias</h2>
+    </div>
+
+	<form method="GET" action="get.php">
+		Nama :
+		<input type="text" name="nama"><br>
+		Umur :
+		<input type="text" name="umur"><br>
+		Alamat :
+		<input type="text" name="alamat"><br>
+		Penghasilan :
+		<input type="text" name="penghasilan"><br>
+		<tr>
+	  		<td><input type="submit" name="kirim" value="PROSES" class="form-control"></td>
+	</tr>
+
+  </form>
+		<?php
+			if($_GET)
+			{
+				echo 'Nama : ' .$_GET['nama'];
+				echo '<br>';
+				echo 'Umur : ' .$_GET['umur'];
+				echo '<br>';
+				echo 'Alamat : ' .$_GET['alamat'];
+				echo '<br>';
+				echo 'Penghasilan : ' .$_GET['penghasilan'];
+				echo '<br>';
+			}
+    ?>
+</body>
+</html>
